@@ -1,100 +1,105 @@
-/*!
-    Title: Dev Portfolio Template
-    Version: 1.2.2
-    Last Change: 03/25/2020
-    Author: Ryan Fitzgerald
-    Repo: https://github.com/RyanFitzgerald/devportfolio-template
-    Issues: https://github.com/RyanFitzgerald/devportfolio-template/issues
+(function() {
+    var root = document.documentElement;
+    var menu = document.querySelector(".nav-links");
+    var menuToggle = document.querySelector(".menu-toggle");
+    var themeToggle = document.getElementById("theme-toggle");
+    var toTop = document.getElementById("to-top");
+    var currentYear = document.getElementById("current-year");
+    var navLinks = Array.prototype.slice.call(document.querySelectorAll(".nav-links a"));
+    var sections = navLinks
+        .map(function(link) {
+            return document.querySelector(link.getAttribute("href"));
+        })
+        .filter(Boolean);
 
-    Description: This file contains all the scripts associated with the single-page
-    portfolio website.
-*/
+    root.classList.remove("no-js");
 
-(function($) {
+    if (currentYear) {
+        currentYear.textContent = new Date().getFullYear();
+    }
 
-    // Show current year
-    $("#current-year").text(new Date().getFullYear());
+    function setTheme(theme) {
+        root.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
 
-    // Remove no-js class
-    $('html').removeClass('no-js');
-
-    // Animate to section when nav is clicked
-    $('header a').click(function(e) {
-
-        // Treat as normal link if no-scroll class
-        if ($(this).hasClass('no-scroll')) return;
-
-        e.preventDefault();
-        var heading = $(this).attr('href');
-        var scrollDistance = $(heading).offset().top;
-
-        $('html, body').animate({
-            scrollTop: scrollDistance + 'px'
-        }, Math.abs(window.pageYOffset - $(heading).offset().top) / 1);
-
-        // Hide the menu once clicked if mobile
-        if ($('header').hasClass('active')) {
-            $('header, body').removeClass('active');
+        if (themeToggle) {
+            themeToggle.innerHTML = theme === "dark"
+                ? '<i class="fa fa-sun-o" aria-hidden="true"></i>'
+                : '<i class="fa fa-moon-o" aria-hidden="true"></i>';
         }
-    });
+    }
 
-    // Scroll to top
-    $('#to-top').click(function() {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 500);
-    });
+    var savedTheme = localStorage.getItem("theme");
+    var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    setTheme(savedTheme || (prefersDark ? "dark" : "light"));
 
-    // Scroll to first element
-    $('#lead-down span').click(function() {
-        var scrollDistance = $('#lead').next().offset().top;
-        $('html, body').animate({
-            scrollTop: scrollDistance + 'px'
-        }, 500);
-    });
-
-    // Create timeline
-    $('#experience-timeline').each(function() {
-
-        $this = $(this); // Store reference to this
-        $userContent = $this.children('div'); // user content
-
-        // Create each timeline block
-        $userContent.each(function() {
-            $(this).addClass('vtimeline-content').wrap('<div class="vtimeline-point"><div class="vtimeline-block"></div></div>');
+    if (themeToggle) {
+        themeToggle.addEventListener("click", function() {
+            setTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark");
         });
+    }
 
-        // Add icons to each block
-        $this.find('.vtimeline-point').each(function() {
-            $(this).prepend('<div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div>');
+    if (menuToggle && menu) {
+        menuToggle.addEventListener("click", function() {
+            var isOpen = menu.classList.toggle("open");
+            document.body.classList.toggle("menu-open", isOpen);
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.innerHTML = isOpen
+                ? '<i class="fa fa-times" aria-hidden="true"></i>'
+                : '<i class="fa fa-bars" aria-hidden="true"></i>';
         });
+    }
 
-        // Add dates to the timeline if exists
-        $this.find('.vtimeline-content').each(function() {
-            var date = $(this).data('date');
-            if (date) { // Prepend if exists
-                $(this).parent().prepend('<span class="vtimeline-date">'+date+'</span>');
+    navLinks.forEach(function(link) {
+        link.addEventListener("click", function() {
+            if (menu && menu.classList.contains("open")) {
+                menu.classList.remove("open");
+                document.body.classList.remove("menu-open");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.innerHTML = '<i class="fa fa-bars" aria-hidden="true"></i>';
             }
         });
-
     });
 
-    // Open mobile menu
-    $('#mobile-menu-open').click(function() {
-        $('header, body').addClass('active');
-    });
-
-    // Close mobile menu
-    $('#mobile-menu-close').click(function() {
-        $('header, body').removeClass('active');
-    });
-
-    // Load additional projects
-    $('#view-more-projects').click(function(e){
-        e.preventDefault();
-        $(this).fadeOut(300, function() {
-            $('#more-projects').fadeIn(300);
+    if (toTop) {
+        toTop.addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
         });
-    });
+    }
 
-})(jQuery);
+    if ("IntersectionObserver" in window) {
+        var revealObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll(".reveal").forEach(function(element) {
+            revealObserver.observe(element);
+        });
+
+        var navObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (!entry.isIntersecting) return;
+
+                navLinks.forEach(function(link) {
+                    link.classList.toggle("active", link.getAttribute("href") === "#" + entry.target.id);
+                });
+            });
+        }, {
+            rootMargin: "-35% 0px -55% 0px",
+            threshold: 0
+        });
+
+        sections.forEach(function(section) {
+            navObserver.observe(section);
+        });
+    } else {
+        document.querySelectorAll(".reveal").forEach(function(element) {
+            element.classList.add("is-visible");
+        });
+    }
+})();

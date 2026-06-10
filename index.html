@@ -6,353 +6,359 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Anderson Koki | Data Analyst & Data Engineer</title>
-    <meta name="description" content="Anderson Koki's professional portfolio focused on Data Analysis, Data Engineering, and Business Intelligence.">
+    <meta name="description" content="Modern professional portfolio for Anderson Koki, Data Analyst, Data Engineer, and Business Intelligence specialist.">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
-    <div id="mobile-menu-open" class="shadow-large">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-    </div>
-    <!-- End #mobile-menu-toggle -->
+    <header class="site-header">
+        <nav class="nav-shell" aria-label="Primary navigation">
+            <a class="brand" href="#lead" aria-label="Anderson Koki home">
+                <span>AK</span>
+                Anderson Koki
+            </a>
 
-    <header>
-        <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
-        </div>
-        <ul id="menu" class="shadow">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#languages">Languages</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+            <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+
+            <ul id="menu" class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+                <i class="fa fa-moon-o" aria-hidden="true"></i>
+            </button>
+        </nav>
     </header>
-    <!-- End header -->
 
-    <div id="lead">
-        <div id="lead-content">
-            <h1>Anderson Koki</h1>
-            <h2>Data Analyst | Data Engineer | Business Intelligence</h2>
-            <a href="https://drive.google.com/drive/folders/1JMaWXtmMG6iUj3lJFOjHrhBmCFtwa4fS?usp=share_link" target="_blank" rel="external noopener" class="btn-rounded-white">Download Resume</a>
-        </div>
-        <!-- End #lead-content -->
+    <main>
+        <section id="lead" class="hero section">
+            <div class="hero-grid" aria-hidden="true"></div>
+            <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+            <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
 
-        <div id="lead-overlay"></div>
-
-        <div id="lead-down">
-            <span>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </span>
-        </div>
-        <!-- End #lead-down -->
-    </div>
-    <!-- End #lead -->
-
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2 class="heading">About Me</h2>
+            <div class="container hero-content reveal">
+                <div class="eyebrow">
+                    <span class="status-dot"></span>
+                    Data Analytics • Data Engineering • BI
                 </div>
-                <div class="col-md-8">
+                <h1>Anderson Koki</h1>
+                <p class="hero-tagline">Turning complex operational data into trusted insights, scalable pipelines, and business-ready decisions.</p>
+                <p class="hero-copy">
+                    Data Analyst and Business Intelligence professional with experience across Databricks, SQL, dashboards, data modeling,
+                    operational KPIs, and multidisciplinary product squads.
+                </p>
+                <div class="hero-actions">
+                    <a href="https://drive.google.com/drive/folders/1JMaWXtmMG6iUj3lJFOjHrhBmCFtwa4fS?usp=share_link" target="_blank" rel="external noopener" class="btn btn-primary">Download Resume</a>
+                    <a href="#projects" class="btn btn-secondary">View Projects</a>
+                    <a href="#contact" class="btn btn-ghost">Contact Me</a>
+                </div>
+
+                <div class="hero-metrics" aria-label="Professional highlights">
+                    <div>
+                        <strong>10+ yrs</strong>
+                        <span>Data-driven operations</span>
+                    </div>
+                    <div>
+                        <strong>4</strong>
+                        <span>Industries and roles</span>
+                    </div>
+                    <div>
+                        <strong>3</strong>
+                        <span>Languages beyond Portuguese</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container section-grid">
+                <div class="section-kicker reveal">
+                    <span>About Me</span>
+                    <h2>Analytical thinking with strong business context.</h2>
+                </div>
+                <div class="section-body reveal">
                     <p>
                         I am a Data Analyst, Data Engineer, and Business Intelligence professional based in Rio Grande do Sul, Brazil.
                         My purpose is to work in innovative environments, help people, make meaningful contributions, collaborate effectively,
-                        and keep growing personally and professionally. I combine technical data skills with operational experience, business
-                        understanding, and a strong focus on quality, clarity, and reliable delivery.
+                        and keep growing personally and professionally.
                     </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End #about -->
-
-    <div id="experience" class="background-alt">
-        <h2 class="heading">Experience</h2>
-        <div id="experience-timeline">
-            <div data-date="November 2024 - Present">
-                <h3>NTT DATA</h3>
-                <h4>Data Analyst | Business Intelligence</h4>
-                <p>
-                    Participate in development squads and multidisciplinary teams to design and evolve high-impact solutions. Conduct data
-                    discovery and analysis based on contractual scopes, document findings in English, create validation notebooks in Databricks,
-                    apply SQL for querying and manipulation, develop and optimize data models, participate in SCRUM ceremonies, and deliver
-                    reliable results with a strong focus on quality.
-                </p>
-            </div>
-
-            <div data-date="January 2023 - November 2024">
-                <h3>Sossego</h3>
-                <h4>Data Analyst | Business Intelligence</h4>
-                <p>
-                    Worked with development and product maintenance squads to support the creation and evolution of systems and products.
-                    Built reports and dashboards, collaborated with Product and Support teams using operational data, extracted and processed
-                    data from multiple sources, improved data quality, modeled data for complex analysis, planned activities, and actively
-                    participated in SCRUM rituals.
-                </p>
-            </div>
-
-            <div data-date="August 2020 - January 2023">
-                <h3>Saque e Pague</h3>
-                <h4>Data Analyst | Business Intelligence</h4>
-                <p>
-                    Helped structure the operations data intelligence area, analyzed complex operational processes, prepared technical reports
-                    and presentations for strategic decisions, developed and maintained operational dashboards, extracted reports, studied
-                    performance results, supported KPI structuring, and improved clarity and consistency in data communication.
-                </p>
-            </div>
-
-            <div data-date="January 2012 - May 2020">
-                <h3>Kurashiki do Brasil</h3>
-                <h4>Production and Planning Supervisor (PCP)</h4>
-                <p>
-                    Managed operational processes and data using quality control and continuous improvement tools such as SPC, Ishikawa Diagram,
-                    Pareto, Lean Manufacturing, One Point Lesson, and 5W2H. Led teams, monitored KPIs, planned preventive maintenance,
-                    supported Japanese-Portuguese communication, assisted commercial visits, controlled production planning, analyzed stock
-                    and capacity data, and translated operational insights into business decisions.
-                </p>
-            </div>
-        </div>
-    </div>
-    <!-- End #experience -->
-
-    <div id="education">
-        <h2 class="heading">Education</h2>
-        <div class="education-block">
-            <h3>Data Science Academy</h3>
-            <span class="education-date">July 2022 - July 2023</span>
-            <h4>Data Engineer Training</h4>
-            <p>
-                Training focused on distributed systems, data pipelines, data source integration, solution architecture, and data engineering
-                practices for analytics and data science teams.
-            </p>
-        </div>
-        <!-- End .education-block -->
-
-        <div class="education-block">
-            <h3>Faculdade Metropolitana</h3>
-            <span class="education-date">January 2020 - January 2021</span>
-            <h4>Postgraduate Degree in Data Science and Big Data Analytics</h4>
-            <p>
-                Studies focused on Big Data, Business Analytics, data analysis, and practical approaches to managing projects involving large
-                volumes of data.
-            </p>
-        </div>
-        <!-- End .education-block -->
-
-        <div class="education-block">
-            <h3>Universidade Feevale</h3>
-            <span class="education-date">July 2011 - December 2018</span>
-            <h4>Bachelor's Degree in Production Engineering</h4>
-            <p>
-                Engineering program focused on solving complex problems, systems thinking, process improvement, and value generation for
-                organizations.
-            </p>
-        </div>
-        <!-- End .education-block -->
-    </div>
-    <!-- End #education -->
-
-    <div id="projects" class="background-alt">
-        <h2 class="heading">Projects</h2>
-        <div class="container">
-            <div class="row">
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project1.jpg" alt="Data warehouse capacity planning project" />
-                    </div>
-                    <div class="project-info">
-                        <h3>Data Warehouse Capacity Planning with Airbyte</h3>
-                        <p>
-                            Project focused on planning the computing resources required to implement a Data Warehouse, either on-premises or
-                            in the cloud. Source: Data Science Academy.
-                        </p>
-                    </div>
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project2.jpg" alt="Data warehouse pipeline with Apache Airflow and Metabase" />
-                    </div>
-                    <div class="project-info">
-                        <h3>Data Warehouse Load and Analytics Pipeline with Apache Airflow and Metabase</h3>
-                        <p>
-                            Built a data load and analytics pipeline using Apache Airflow and Metabase. The workflow extracts JSON data,
-                            applies business transformation rules in Python, loads the Data Warehouse, and supports insight generation in
-                            Metabase. Source: Data Science Academy.
-                        </p>
-                    </div>
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project3.jpg" alt="Azure Data Factory data pipeline project" />
-                    </div>
-                    <div class="project-info">
-                        <h3>Azure Data Factory Pipeline for Azure SQL Database</h3>
-                        <p>
-                            Built a cloud-based data pipeline with Azure Data Factory to load CSV data into an Azure SQL Database. Source:
-                            Data Science Academy.
-                        </p>
-                    </div>
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project4.jpg" alt="Databricks Lakehouse analytics pipeline project" />
-                    </div>
-                    <div class="project-info">
-                        <h3>Databricks Lakehouse Analytics Pipeline with Delta Lake, Airbyte, and Apache Spark</h3>
-                        <p>
-                            Built an analytics pipeline to move data from a local relational database into a cloud Data Lakehouse for processing
-                            and analysis. The solution used Docker, Airbyte, Apache Spark, and Databricks on AWS. Source: Data Science Academy.
-                        </p>
-                    </div>
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project5.png" alt="MongoDB data lake project" />
-                    </div>
-                    <div class="project-info">
-                        <h3>Data Lake with MongoDB</h3>
-                        <p>
-                            Built a complete Python pipeline for extraction, transformation, and loading into a MongoDB Data Lake, handling a
-                            data source with a flexible structure while preparing data for high-performance analysis. Source: Data Science
-                            Academy.
-                        </p>
-                    </div>
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project6.png" alt="Python ETL pipeline for Apache Cassandra" />
-                    </div>
-                    <div class="project-info">
-                        <h3>Python ETL Pipeline for Data Loading and Analytics in Apache Cassandra</h3>
-                        <p>
-                            Built a complete pipeline including extraction, transformation, loading, and analytics. Python was used for
-                            extraction and transformation, while data loading and analytics were handled in Apache Cassandra. Source: Data
-                            Science Academy.
-                        </p>
-                    </div>
-                </div>
-                <!-- End .project -->
-            </div>
-        </div>
-    </div>
-    <!-- End #projects -->
-
-    <div id="skills">
-        <h2 class="heading">Skills</h2>
-        <ul>
-            <li>Python</li>
-            <li>SQL</li>
-            <li>Shell Scripting</li>
-            <li>Power BI</li>
-            <li>Metabase</li>
-            <li>Looker Data Studio</li>
-            <li>Apache Superset</li>
-            <li>Tableau</li>
-            <li>Redash</li>
-            <li>Grafana</li>
-            <li>Excel</li>
-            <li>PowerPoint</li>
-            <li>Word</li>
-            <li>Pentaho Data Integration</li>
-            <li>Apache Hop</li>
-            <li>Apache NiFi</li>
-            <li>Airbyte</li>
-            <li>Knime Analytics Platform</li>
-            <li>Apache Airflow</li>
-            <li>MySQL</li>
-            <li>PostgreSQL</li>
-            <li>SQL Server</li>
-            <li>Google BigQuery</li>
-            <li>Oracle</li>
-            <li>MongoDB</li>
-            <li>Azure Data Factory</li>
-            <li>Databricks</li>
-            <li>Docker</li>
-            <li>Git</li>
-        </ul>
-    </div>
-    <!-- End #skills -->
-
-    <div id="languages" class="optional-section background-alt">
-        <h2 class="heading">Languages</h2>
-        <ul>
-            <li>English: Advanced</li>
-            <li>Japanese: Fluent</li>
-            <li>Spanish: Intermediate</li>
-            <li>Portuguese: Native</li>
-        </ul>
-    </div>
-    <!-- End #languages -->
-
-    <div id="contact">
-        <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form action="https://formspree.io/f/mkneegqo" method="POST">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-        <!-- End #contact-form -->
-    </div>
-    <!-- End #contact -->
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
                     <p>
-                        Copyright &copy; <span id="current-year">2026</span> Anderson Koki
+                        I combine technical data skills with operational experience, business understanding, and a strong focus on quality,
+                        clear documentation, reliable delivery, and stakeholder-friendly communication.
                     </p>
                 </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
+            </div>
+        </section>
+
+        <section id="skills" class="section section-alt">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span>Technical Skills</span>
+                    <h2>Modern data stack capabilities</h2>
+                    <p>Grouped by how recruiters and technical teams evaluate data professionals.</p>
                 </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li>
-                            <a href="mailto:koukimiyabe@gmail.com" aria-label="Email Anderson Koki">
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/AndersonKoki" target="_blank" rel="noopener" aria-label="Anderson Koki on GitHub">
-                                <i class="fa fa-github" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://linkedin.com/in/anderson-koki-54177b8a/" target="_blank" rel="noopener" aria-label="Anderson Koki on LinkedIn">
-                                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                    </ul>
+
+                <div class="skills-grid">
+                    <article class="skill-card reveal">
+                        <i class="fa fa-line-chart" aria-hidden="true"></i>
+                        <h3>Data Analytics</h3>
+                        <p>SQL analysis, KPI definition, operational reporting, exploratory studies, and data quality checks.</p>
+                        <div class="skill-level"><span style="width: 92%"></span></div>
+                        <ul><li>SQL</li><li>KPIs</li><li>Data Quality</li></ul>
+                    </article>
+                    <article class="skill-card reveal">
+                        <i class="fa fa-cogs" aria-hidden="true"></i>
+                        <h3>Data Engineering</h3>
+                        <p>ETL pipelines, workflow orchestration, data integration, validation notebooks, and scalable processing.</p>
+                        <div class="skill-level"><span style="width: 86%"></span></div>
+                        <ul><li>Airflow</li><li>Airbyte</li><li>Databricks</li></ul>
+                    </article>
+                    <article class="skill-card reveal">
+                        <i class="fa fa-pie-chart" aria-hidden="true"></i>
+                        <h3>BI & Visualization</h3>
+                        <p>Dashboards and business-ready insights with strong visual clarity and decision support.</p>
+                        <div class="skill-level"><span style="width: 90%"></span></div>
+                        <ul><li>Power BI</li><li>Metabase</li><li>Tableau</li></ul>
+                    </article>
+                    <article class="skill-card reveal">
+                        <i class="fa fa-database" aria-hidden="true"></i>
+                        <h3>Cloud & Databases</h3>
+                        <p>Relational, analytical, and NoSQL platforms for extraction, modeling, and reporting.</p>
+                        <div class="skill-level"><span style="width: 84%"></span></div>
+                        <ul><li>PostgreSQL</li><li>SQL Server</li><li>BigQuery</li></ul>
+                    </article>
+                    <article class="skill-card reveal">
+                        <i class="fa fa-code" aria-hidden="true"></i>
+                        <h3>Programming</h3>
+                        <p>Automation and data manipulation using code-first workflows and version control practices.</p>
+                        <div class="skill-level"><span style="width: 82%"></span></div>
+                        <ul><li>Python</li><li>Shell</li><li>Git</li></ul>
+                    </article>
                 </div>
             </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span>Experience</span>
+                    <h2>Professional timeline</h2>
+                    <p>From operations leadership to analytics, data engineering, and BI delivery.</p>
+                </div>
+
+                <div class="timeline">
+                    <article class="timeline-item reveal">
+                        <div class="timeline-date">Nov 2024 - Present</div>
+                        <div class="timeline-content">
+                            <h3>NTT DATA</h3>
+                            <h4>Data Analyst | Business Intelligence</h4>
+                            <p>Participate in development squads, conduct data discovery from contractual scopes, document findings in English, create Databricks validation notebooks, apply SQL, optimize data models, and deliver reliable results in SCRUM teams.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item reveal">
+                        <div class="timeline-date">Jan 2023 - Nov 2024</div>
+                        <div class="timeline-content">
+                            <h3>Sossego</h3>
+                            <h4>Data Analyst | Business Intelligence</h4>
+                            <p>Built reports and dashboards, collaborated with Product and Support teams, extracted and processed data from multiple sources, improved data quality, modeled data for analysis, and participated in SCRUM rituals.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item reveal">
+                        <div class="timeline-date">Aug 2020 - Jan 2023</div>
+                        <div class="timeline-content">
+                            <h3>Saque e Pague</h3>
+                            <h4>Data Analyst | Business Intelligence</h4>
+                            <p>Helped structure operations data intelligence, analyzed complex processes, prepared technical reports and presentations, developed dashboards, extracted operational reports, and supported KPI structuring.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item reveal">
+                        <div class="timeline-date">Jan 2012 - May 2020</div>
+                        <div class="timeline-content">
+                            <h3>Kurashiki do Brasil</h3>
+                            <h4>Production and Planning Supervisor (PCP)</h4>
+                            <p>Managed operational processes and data using SPC, Ishikawa, Pareto, Lean Manufacturing, One Point Lesson, and 5W2H. Led teams, monitored KPIs, supported Japanese-Portuguese communication, and planned production capacity.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section section-alt">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span>Featured Projects</span>
+                    <h2>Applied data engineering and analytics work</h2>
+                    <p>Hands-on projects covering pipelines, warehouses, lakehouses, analytics, and cloud data platforms.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card reveal">
+                        <img src="images/project1.jpg" alt="Data warehouse capacity planning project">
+                        <div class="project-content">
+                            <h3>Data Warehouse Capacity Planning</h3>
+                            <p>Planned computing resources required to implement a Data Warehouse on-premises or in the cloud.</p>
+                            <div class="tags"><span>Airbyte</span><span>Data Warehouse</span><span>Planning</span></div>
+                            <div class="project-actions"><a href="https://github.com/AndersonKoki" target="_blank" rel="noopener">GitHub</a><a href="#contact">Live Demo</a></div>
+                        </div>
+                    </article>
+                    <article class="project-card reveal">
+                        <img src="images/project2.jpg" alt="Apache Airflow and Metabase data warehouse pipeline">
+                        <div class="project-content">
+                            <h3>DW Pipeline with Airflow & Metabase</h3>
+                            <p>Extracted JSON data, transformed it with Python, loaded the warehouse, and explored insights in Metabase.</p>
+                            <div class="tags"><span>Python</span><span>Airflow</span><span>Metabase</span></div>
+                            <div class="project-actions"><a href="https://github.com/AndersonKoki" target="_blank" rel="noopener">GitHub</a><a href="#contact">Live Demo</a></div>
+                        </div>
+                    </article>
+                    <article class="project-card reveal">
+                        <img src="images/project3.jpg" alt="Azure Data Factory pipeline project">
+                        <div class="project-content">
+                            <h3>Azure Data Factory Pipeline</h3>
+                            <p>Built a cloud data pipeline to load CSV data into an Azure SQL Database.</p>
+                            <div class="tags"><span>Azure</span><span>ADF</span><span>SQL</span></div>
+                            <div class="project-actions"><a href="https://github.com/AndersonKoki" target="_blank" rel="noopener">GitHub</a><a href="#contact">Live Demo</a></div>
+                        </div>
+                    </article>
+                    <article class="project-card reveal">
+                        <img src="images/project4.jpg" alt="Databricks Lakehouse analytics pipeline">
+                        <div class="project-content">
+                            <h3>Databricks Lakehouse Pipeline</h3>
+                            <p>Moved relational data into a cloud Lakehouse for processing and analytics with Spark and Delta Lake.</p>
+                            <div class="tags"><span>Databricks</span><span>Spark</span><span>Delta Lake</span></div>
+                            <div class="project-actions"><a href="https://github.com/AndersonKoki" target="_blank" rel="noopener">GitHub</a><a href="#contact">Live Demo</a></div>
+                        </div>
+                    </article>
+                    <article class="project-card reveal">
+                        <img src="images/project5.png" alt="MongoDB Data Lake project">
+                        <div class="project-content">
+                            <h3>Data Lake with MongoDB</h3>
+                            <p>Created a Python pipeline for extraction, transformation, and loading into a MongoDB Data Lake.</p>
+                            <div class="tags"><span>MongoDB</span><span>Python</span><span>ETL</span></div>
+                            <div class="project-actions"><a href="https://github.com/AndersonKoki" target="_blank" rel="noopener">GitHub</a><a href="#contact">Live Demo</a></div>
+                        </div>
+                    </article>
+                    <article class="project-card reveal">
+                        <img src="images/project6.png" alt="Apache Cassandra ETL analytics pipeline">
+                        <div class="project-content">
+                            <h3>ETL Pipeline for Cassandra</h3>
+                            <p>Built an end-to-end extraction, transformation, loading, and analytics workflow using Python and Cassandra.</p>
+                            <div class="tags"><span>Cassandra</span><span>Python</span><span>Analytics</span></div>
+                            <div class="project-actions"><a href="https://github.com/AndersonKoki" target="_blank" rel="noopener">GitHub</a><a href="#contact">Live Demo</a></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="section">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span>Certifications</span>
+                    <h2>Continuous learning in data</h2>
+                </div>
+                <div class="credential-grid">
+                    <article class="credential-card reveal">
+                        <i class="fa fa-certificate" aria-hidden="true"></i>
+                        <h3>Data Engineer Training</h3>
+                        <p>Data Science Academy • 2022 - 2023</p>
+                    </article>
+                    <article class="credential-card reveal">
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        <h3>Data Science & Big Data Analytics</h3>
+                        <p>Faculdade Metropolitana • Postgraduate Degree</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section section-alt">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span>Education</span>
+                    <h2>Academic foundation</h2>
+                </div>
+                <div class="education-list">
+                    <article class="education-card reveal">
+                        <div><h3>Data Science Academy</h3><p>Data Engineer Training</p></div>
+                        <span>Jul 2022 - Jul 2023</span>
+                    </article>
+                    <article class="education-card reveal">
+                        <div><h3>Faculdade Metropolitana</h3><p>Postgraduate Degree in Data Science and Big Data Analytics</p></div>
+                        <span>Jan 2020 - Jan 2021</span>
+                    </article>
+                    <article class="education-card reveal">
+                        <div><h3>Universidade Feevale</h3><p>Bachelor's Degree in Production Engineering</p></div>
+                        <span>Jul 2011 - Dec 2018</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="languages" class="section">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span>Languages</span>
+                    <h2>Multilingual communication</h2>
+                </div>
+                <div class="language-grid">
+                    <div class="language-card reveal"><strong>Portuguese</strong><span>Native</span></div>
+                    <div class="language-card reveal"><strong>Japanese</strong><span>Fluent</span></div>
+                    <div class="language-card reveal"><strong>English</strong><span>Advanced</span></div>
+                    <div class="language-card reveal"><strong>Spanish</strong><span>Intermediate</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="container contact-grid">
+                <div class="contact-copy reveal">
+                    <span>Contact</span>
+                    <h2>Let's build data products that people can trust.</h2>
+                    <p>Open to data analytics, BI, and data engineering opportunities where clarity, reliability, and business impact matter.</p>
+                    <div class="contact-links">
+                        <a href="mailto:koukimiyabe@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> koukimiyabe@gmail.com</a>
+                        <a href="https://linkedin.com/in/anderson-koki-54177b8a/" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+                        <a href="https://github.com/AndersonKoki" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal" action="https://formspree.io/f/mkneegqo" method="POST">
+                    <input type="hidden" name="_subject" value="Contact request from personal website">
+                    <label>
+                        <span>Email</span>
+                        <input type="email" name="_replyto" placeholder="Your email" required>
+                    </label>
+                    <label>
+                        <span>Message</span>
+                        <textarea name="message" placeholder="How can I help?" required></textarea>
+                    </label>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Copyright &copy; <span id="current-year">2026</span> Anderson Koki</p>
+            <button id="to-top" type="button" aria-label="Back to top"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
         </div>
     </footer>
-    <!-- End footer -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
